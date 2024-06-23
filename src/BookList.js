@@ -16,15 +16,16 @@ function BookList() {
   return (
     <section className='booklist'>
       {bookList.map((book, index) => {
-        return <Book book={book} key={index} />;
+        return <Book {...book} key={index} />;
       })}
     </section>
   );
 }
 
 export default BookList;
-const Book = (props) => {
-  const { title, author, imgPath } = props.book;
+const Book = (book) => {
+  console.log(book);
+  const { title, author, imgPath } = book;
   return (
     <article className='book'>
       <h1>{title}</h1>
