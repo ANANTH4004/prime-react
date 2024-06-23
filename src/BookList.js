@@ -1,6 +1,7 @@
+import './styles/index.css';
 function BookList() {
   return (
-    <section>
+    <section className='booklist'>
       <Book />
       <Book />
       <Book />
@@ -13,14 +14,10 @@ function BookList() {
 export default BookList;
 const Book = () => {
   return (
-    <article>
-      <Title />
-      <Image />
-      <Author />
+    <article className='book'>
+      <h1>This is the Title</h1>
+      <img src='' alt='Here will be the Book Image' />
+      <p className='author-name'>Anand</p>
     </article>
   );
 };
-
-const Title = () => <h1>This is ethe Titile</h1>;
-const Image = () => <img src='' alt='Here will the Book Image' />;
-const Author = () => <p className='author-name'>Anand</p>;
